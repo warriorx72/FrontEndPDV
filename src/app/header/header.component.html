@@ -1,0 +1,29 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+    <a class="navbar-brand" href="#">Carousel</a>
+    <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [ngbCollapse]="isMenuCollapsed">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" >
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" [routerLink]="['/directivas']" routerLinkActive="router-link-active" >Directivas</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" [routerLink]="['/clientes']" routerLinkActive="router-link-active" >Clientes</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" [routerLink]="['/empresas']" routerLinkActive="router-link-active" >Empresas</a>
+        </li>
+      </ul>
+      <form class="form-inline mt-2 mt-md-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+</header>
+
